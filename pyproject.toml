@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "selig_sandbox"
+version = "1.0.0"
+description = "R&D"
+authors = ["Lucas Selig <lucas@happy.ai>"]
+license = "Proprietary"
+
+[tool.poetry.dependencies]
+python = "~3.8.5"
+
+# Private Packages
+happyalgos = {git = "ssh://git@github.com/happy-health/dsci-algorithms-python.git"}
