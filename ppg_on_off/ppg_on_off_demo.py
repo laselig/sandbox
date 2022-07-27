@@ -19,13 +19,13 @@ import pandas as pd
 import scipy.signal as dsp
 import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report
-# from happyalgos.stress.live import (
-#     HPYLiveStressRunner,
-#     HPYLiveStressPersonalizer,
-#     HPYLiveStressOptions,
-#     HPYLiveStressState,
-#     HPYLiveStressPersonalization,
-# )
+from happyalgos.stress.live import (
+    HPYLiveStressRunner,
+    HPYLiveStressPersonalizer,
+    HPYLiveStressOptions,
+    HPYLiveStressState,
+    HPYLiveStressPersonalization,
+)
 # MV = magic values
 MV1 = 0.00082
 MV2 = 1.06662
@@ -33,6 +33,9 @@ MV3 = 0.93380
 MV4 = 0.00002
 MV5 = 0.00007
 
+my_dictionary = {"ts": [1, 2, 3],
+                "asdlfkjasdflkj": [12, 34]
+                 }
 
 def window_ranger(ts_start, ts_end, stride, window):
     """Makes window ranges given a start and end time.
@@ -105,6 +108,7 @@ def make_final_prediction(X, sleep_threshold, awake_threshold):
         else:
             y_pred[i] = pred[0]
     return y_pred
+
 
 acc_raw = pd.read_parquet("/Users/lselig/selig-sandbox/data/DB5FA386-D75A-482B-A35A-5EFA94E58AC5_d81371000060_03092022_acc_raw.parquet")
 # for plotting
