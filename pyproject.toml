@@ -10,3 +10,6 @@ python = "~3.8.5"
 
 # Private Packages
 happyalgos = {git = "ssh://git@github.com/happy-health/dsci-algorithms-python.git"}
+
+[tool.poetry.dev-dependencies]
+ipykernel = "^6.15.1"
